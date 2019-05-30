@@ -1,7 +1,29 @@
+body {
+  font-family: 'Times New Roman', Times, serif;
+/*     font-family: 'Germania One', cursive; */
+  width: 100%;
+ background: linear-gradient(to right, white, yellow, red)
+}
+
+h1, h2 {
+  text-align : center;
+}
+ul li {
+  background-color: transparent;
+}
 li {
   padding: 5px;
   margin: 5px;
   background: #faebd7;
+}
+
+img {
+  width: 100%;
+  height: 100%
+}
+
+.change-devoured {
+float : right;
 }
 
 .label {
@@ -17,3 +39,4 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+

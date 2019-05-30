@@ -30,7 +30,7 @@ function objToSql(ob) {
         value = "'" + value + "'";
       }
       // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-      // e.g. {sleepy: true} => ["sleepy=true"]
+      // e.g. {devoured: true} => ["devoured=true"]
       arr.push(key + "=" + value);
     }
   }
@@ -46,12 +46,13 @@ var orm = {
     connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
-      }
+      }       console.log("entre al orm ",result);
       cb(result);
     });
   },
   create: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
+    console.log("create data");
 
     queryString += " (";
     queryString += cols.toString();
@@ -70,7 +71,7 @@ var orm = {
       cb(result);
     });
   },
-  // An example of objColVals would be {name: panther, sleepy: true}
+  // An example of objColVals would be {burger_name: panther, devoured: true}
   update: function (table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
 
@@ -90,5 +91,5 @@ var orm = {
   },
 };
 
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (burger.js).
 module.exports = orm;
