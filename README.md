@@ -1,4 +1,4 @@
-# burguer
+# Eat-Da-Burger!
 Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat.  
 
 The app is a simple full stack with a front end: HTML/CSS express-handlebars, and the backend implemented with Node.js, Express, MySQL.
@@ -29,6 +29,7 @@ Run "node server" locally.
    - [Javascript,](https://www.w3schools.com/js/default.asp)
    - Node Packages :
      - express,
+     - body-parser,
      - express-handlebars,
      - MySQL.
 
